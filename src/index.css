@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.terminal-text {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+.terminal-prompt::before {
+  content: '>';
+  margin-right: 0.75rem;
+  color: #9333ea;
+}
+
+.matrix-bg {
+  background-image: radial-gradient(
+    circle at 25px 25px,
+    rgba(147, 51, 234, 0.1) 2%,
+    transparent 0%
+  ),
+  radial-gradient(
+    circle at 75px 75px,
+    rgba(147, 51, 234, 0.05) 2%,
+    transparent 0%
+  );
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+}
