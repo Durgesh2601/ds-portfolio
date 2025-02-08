@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Code2,
 } from "lucide-react";
+import profilePic from "../assets/profile.jpg";
 
 export default function Hero() {
 
@@ -121,7 +122,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.02 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&q=80&w=400&h=400"
+                  src={profilePic}
                   alt="Profile"
                   className="w-72 h-72 object-cover"
                 />

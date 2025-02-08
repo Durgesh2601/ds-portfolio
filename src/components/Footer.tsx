@@ -12,7 +12,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/Durgesh2601"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
@@ -20,7 +20,7 @@ export default function Footer() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/siinghdurgesh/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
@@ -28,7 +28,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:dk829445@gamil.com"
               className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
             >
               <Mail size={20} />
