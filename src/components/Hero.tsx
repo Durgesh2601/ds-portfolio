@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Terminal, Github, Linkedin, Mail, ChevronDown, Code2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  Terminal,
+  Github,
+  Linkedin,
+  Mail,
+  ChevronDown,
+  Code2,
+} from "lucide-react";
 
 export default function Hero() {
-  const [text, setText] = useState('');
-  const fullText = '{ role: "Software Engineer", specialization: "Frontend Development", experience: "2+ years" }';
-
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      setText(fullText.slice(0, index));
-      index++;
-      if (index > fullText.length) clearInterval(timer);
-    }, 50);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section id="about" className="min-h-screen pt-20 matrix-bg relative">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             className="order-2 md:order-1"
@@ -43,13 +37,26 @@ export default function Hero() {
                   <span className="text-sm">developer.profile</span>
                 </div>
                 <pre className="text-sm">
-                  <code className="text-green-400">{text}</code>
-                  <span className="animate-[blink_1s_step-end_infinite]">|</span>
+                  <code className="text-green-400">
+                    Software Engineer | Frontend at{" "}
+                    <a
+                      href="https://wizcommerce.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-400 hover:text-purple-300 underline"
+                    >
+                      WizCommerce
+                    </a>{" "}
+                    (May 2022 - Present)
+                  </code>
                 </pre>
               </div>
 
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Dynamic and results-driven Software Engineer specializing in Frontend development, with a strong focus on creating intuitive and visually appealing user interfaces. Proven track record of delivering high-quality solutions and optimizing performance.
+                Dynamic and results-driven Software Engineer specializing in
+                Frontend development, with a strong focus on creating intuitive
+                and visually appealing user interfaces. Proven track record of
+                delivering high-quality solutions and optimizing performance.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -65,9 +72,21 @@ export default function Hero() {
 
                 <div className="flex gap-4">
                   {[
-                    { icon: Github, href: 'https://github.com/YourGithubUsername', label: 'GitHub' },
-                    { icon: Linkedin, href: 'https://linkedin.com/in/YourLinkedInUsername', label: 'LinkedIn' },
-                    { icon: Mail, href: 'mailto:dk829445@gmail.com', label: 'Email' }
+                    {
+                      icon: Github,
+                      href: "https://github.com/Durgesh2601",
+                      label: "GitHub",
+                    },
+                    {
+                      icon: Linkedin,
+                      href: "https://www.linkedin.com/in/siinghdurgesh/",
+                      label: "LinkedIn",
+                    },
+                    {
+                      icon: Mail,
+                      href: "mailto:dk829445@gmail.com",
+                      label: "Email",
+                    },
                   ].map((item, index) => (
                     <motion.a
                       key={index}
@@ -79,7 +98,10 @@ export default function Hero() {
                       className="p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all group"
                       aria-label={item.label}
                     >
-                      <item.icon size={20} className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600" />
+                      <item.icon
+                        size={20}
+                        className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600"
+                      />
                     </motion.a>
                   ))}
                 </div>
@@ -87,14 +109,14 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="order-1 md:order-2 flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-pink-600 rounded-full blur-2xl opacity-20 animate-pulse" />
-              <motion.div 
+              <motion.div
                 className="relative rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl"
                 whileHover={{ scale: 1.02 }}
               >
@@ -116,7 +138,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

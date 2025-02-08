@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Terminal, ExternalLink, Github, Code2 } from 'lucide-react';
 
@@ -19,14 +18,14 @@ const projects = [
     github: 'https://github.com/yourusername/dev-explorer',
     demo: 'https://dev-explorer-demo.com'
   },
-  {
-    title: 'WizCommerce Migration',
-    description: 'Led the migration of three main SaaS applications from Create React App to Vite, improving developer productivity by 40% and reducing blocking UI render times by 20%.',
-    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800&h=500',
-    tags: ['Vite', 'React', 'TypeScript', 'Payment Integration', 'Ag-Grid'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
-  }
+  // {
+  //   title: 'WizCommerce Migration',
+  //   description: 'Led the migration of three main SaaS applications from Create React App to Vite, improving developer productivity by 40% and reducing blocking UI render times by 20%.',
+  //   image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800&h=500',
+  //   tags: ['Vite', 'React', 'TypeScript', 'Payment Integration', 'Ag-Grid'],
+  //   github: 'https://github.com',
+  //   demo: 'https://demo.com'
+  // }
 ];
 
 export default function Projects() {
